@@ -1,0 +1,16 @@
+body {
+    margin-right: 10%;
+    margin-left: 10%;
+    background-color: #EBEBE8;
+    font-family: 'Source Serif 4';
+}
+
+#search-input {
+    width: 50%;
+    /* border-radius: 0%; */
+    border-width: 0;
+    padding: 0.5%;
+    font-family: 'Source Serif 4';
+    margin-top: 1%;
+    margin-bottom: 1%;
+}

@@ -1,0 +1,22 @@
+{
+  "stamps": [
+    {
+      "id": 1,
+      "parkName": "Yosemite",
+      "dateVisited": "2024-01-02",
+      "parkCode": "yose"
+    },
+    {
+      "parkName": "Acadia National Park",
+      "dateVisited": "2024-01-03",
+      "id": 2,
+      "parkCode": "acad"
+    },
+    {
+      "parkName": "Yellowstone National Park",
+      "dateVisited": "2024-01-03",
+      "parkCode": "yell",
+      "id": 3
+    }
+  ]
+}

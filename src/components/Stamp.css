@@ -1,0 +1,9 @@
+#stamp {
+    padding: 2%;
+    width: max-content;
+    border-radius: 60%;
+    border-style: double;
+    text-align: center;
+    margin: 2% 5% 2% 5%;
+    border-width: 5px;
+}
