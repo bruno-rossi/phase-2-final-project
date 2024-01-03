@@ -7,7 +7,7 @@ import "./App.css";
 function App() {
 
   const [parks, setParks] = useState([]);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("Park");
   const [stamps, setStamps] = useState([]);
 
   useEffect(() => {

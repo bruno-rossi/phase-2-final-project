@@ -1,22 +1,62 @@
 {
   "stamps": [
     {
+      "parkName": "Grand Canyon National Park",
+      "dateVisited": "2015-05-21",
+      "parkCode": "grca",
       "id": 1,
-      "parkName": "Yosemite",
-      "dateVisited": "2024-01-02",
-      "parkCode": "yose"
+      "borderColor": "red",
+      "borderStyle": "double",
+      "borderRadius": "60%"
     },
     {
-      "parkName": "Acadia National Park",
-      "dateVisited": "2024-01-03",
+      "parkName": "Yosemite National Park",
+      "dateVisited": "2014-10-12",
+      "parkCode": "yose",
       "id": 2,
-      "parkCode": "acad"
+      "color": "green",
+      "borderStyle": "solid",
+      "borderRadius": "10%"
     },
     {
-      "parkName": "Yellowstone National Park",
-      "dateVisited": "2024-01-03",
-      "parkCode": "yell",
+      "parkName": "Point Reyes National Seashore",
+      "dateVisited": "2018-01-14",
+      "parkCode": "pore",
+      "color": "maroon",
+      "borderStyle": "ridge",
       "id": 3
+    }
+  ],
+  "pictures": [
+    {
+      "parkCode": "grca",
+      "url": "https://lh3.googleusercontent.com/pw/ABLVV85AYKJZjPgUfAFMolHF_oWDllUqPvO3idlxD0qZV8j_nOvq7f-u4I3pQTujUvI-mbaDmU6EYguN_8E9xaVcZgueHhyZZoctXYOKPasDczS29WKZGfo92ThJOt6M1m1pNEcjFD__uOMm2BkN9uWVs8mcGWD5I5oBaOyd2y7A4xWdPO3PrrQfwCpHzzSY3xpxC1z9NMFh2K3caCgWP1XDJtlzEUzyo8msN_D-1WOC-dEyZL4SUOHDYZHL1pSejVGFM5gH06OjLDGipL7wPuTjoVp-wwI_RS9OlEGsQBDFxqc07J-lSyqHkaDKyHe4t-H-gpv-bMM3r4yABJCpaOb_8hUJWHglfrGPv67HbsgphUf57VcLQhQvOcpvCe4NPwfip5KSS96LmiFQqwMTxdEB-AYMxBgxfwzaynIyCFOWsUlm4yNif5B_OjvN22h5a9kw7S-uIZ5onQx2TSaGdfg34Mf2L7znR8oTRy-ixrU2hqvezoH4k7gkl3s5jNS-IdE3NsIGqHJP69RL40kieRTyblzWkFO1eA_P9k9Q8Ujqcv8_gRCYDfpIhL8BzWsZN-bEnLHSlQMUCDS2GtB5ewGq8lLaU6mEETsyXnxs0OtrAdduTEKFAgSAop-YGCdXWLwsQI4czpuiGaX0kCfX1yDVmmNcep_VxU0LQFjMO_0ZEzM5F--Ap9gMV3WraHSxBer-bFcyFy9_D4no8gtqOkl3SvTU3LYm60S2LAkAFpc09NIza5oiu32U_MVSuJ7IuU56dpvsVNLts_zXmwRvZxydOccmxbqYgQGBPQNojUzI9zZYtyadTo4d7CVH-OnZhSnG5GsWpq3-IHqpv-UtbmTDuFeK1T9MURIOG9wljsNd-wp1yvz0a_GnnAe6abwIlMIQhDXqHOE=w948-h1264-s-no-gm?authuser=0",
+      "caption": "Grand Canyon view from the southern rim.",
+      "id": 1
+    },
+    {
+      "parkCode": "yose",
+      "url": "https://lh3.googleusercontent.com/pw/ABLVV85T4uLnarYLqFzcu0vxVQBtMr_XUFqYcq_D43ASkn-IA_r1GZLYGJSGXTnu1OPaqfwL8iIMTAWm7ON-qfdbQqpSrWW3cHHwAk2Fa-VVPxgaZO-sxottf6Hy_bGnuBrOylRetQ2T9bQFS3acsyDIBcepJmb7GSQgFycDYAF9Mlnr9UpPPkKXjjbce-ImSzKBn2qwgAvEr_Bnx0ACnv_D-LD4wfd8_-Z5ecT1_0hWVpJY9RNBpzsgiwOiYnk5O9hhxOVRvL3Zj9-KisFX_J-R_6YdZG-59N1-rZtKCBqWAbloUvvtWqsZ6BJb60GQC7WnCQy8rmGZGi5xRRb3QQa0XAWlwiNKhQRF0qiYxDCPtolE3r9Ft4Put-aqbDTgmMP08eObeYiuMZtBox5EovP363gJ9bOf-E-ZhB4EyRma0fO-5bTWeVquKgvg9hYEs-FGRvKYMzwiV0NVXPmdA8-aESGJ0m1C5krkK5Ig8wko9Z2g7Zb9hkhBKXJ0oL5LnbVX3veiTwc8-9Rfo-Om5-2vEy_NQ-byqjysQAq_Z5wmiywe1V0JUhTX8sk8ohonrVMRXLFHzKWS4vDBpLRbHBkDcfOz29J8kqnaCuAocHDKIZxssMDhT8EETmC6IIzNBa-sP1k1vRBGd6sk-xHZ-FyS_IvRrENlsIdqW5wZb_hCTStedVFmkLnlE0m1zskft_0f2aeaOYsWY3phDt-dMije-CPICO2FacC23zcWrZ0gcOAcnh2AL3LpmEPtNnAIwIsCFfm5AqEQ5OV4fvrsrYnUvLKFPkdOXXHOI9bAG6QbQQCF9VihDoFKjeq-Zc-N468RN4IJ-oOkV8awG7fQAv92G_Iy5ZLlkjDH2_7MUSlDSaJpVFllcxfpf2v5XOLmju0wkug86_U=w1686-h1264-s-no-gm?authuser=0",
+      "caption": "Yosemite Valley.",
+      "id": 2
+    },
+    {
+      "parkCode": "pore",
+      "url": "https://lh3.googleusercontent.com/pw/ABLVV86ozdPenga07oYgoMCracxj5fm2Q7sUG6S4BWXcWNHOwGaOx7-vL9bWuftitmzqL4g1J0fbWURBPu-pS6EzjMnwPjbYGjMSLspINhPnAm1ndU4FRYQcOsm1IQV1VtTGm4Ah-yWKTieACqtHBVbfc6XzNtkDcS2sXO6AH09Ho5lD1-26NTbJgQinAIRTP055o68IcmuR-g345SVO1qQvw3uuiwKAUku3lOPHgNZWcB4QUq-5DI2mnmZLusLaoY5gElDQ8Zow-pnhCWtI1CeqFKFHvnvK-SfKUCfg9Z2NyIygO48Q5xA0pTJCu6Q6cIGr3qcYJH4V2sZ6166beyPVPP0Jh7P_NahmoOhrGlyqNZyNWKVFD8ROeNjR0J2yNSZ0eUDniHr3sgN7dCFoanTXmg4WXIemL2RS-xSrewttmGTciIMm8arDW7oLdmSlZ6Jr9Gsmxv1iz1GUcs4Crhjc8vrZaz2Uw18vnwxgsGc0AVsLNJaE8jQ5gpjnmlluHApq0v6eJVKNZcmY4Nqs_fW0qHx3hWC_VjEsM3GzRihATd0d9JguncSp-qSr9bsmaX37P-gorLgel2loKmavJZcSrOCZM4747rsIuXgpFt6LhgGFWR3q96zYrCpfdXsoh25p2IWZsp45cgqIY4yUT9i-_QhPjVU6zZmakmhJXIiDwZy3yL3p-jM19DQ7vBJyxw0gunjrxsI_PDLrM6f8FTYobBZwKi__1ivwSpBM5v5W1hWGLurw3QzAM_pshctBfq95CdBW91J9R3KIh7y9HH5SNRxZfH-_Bg-R2hXbhbQn4zn3qjWoGCd0PDWN1fGQTfZxFE0AJbiyovvbFMp8wc1DDayVO1oYs3X0xwYnTqbnZQOLUWrVbMqW2HFbrwvE-IThNDvFc0M=w948-h1264-s-no-gm?authuser=0",
+      "caption": "Point Reyes Lighthouse.",
+      "id": 3
+    },
+    {
+      "parkCode": "pore",
+      "url": "https://lh3.googleusercontent.com/pw/ABLVV85J3nHYNDNjIDlv7rR67n6uu843Ka9y-qY5bnqvEv0dC3Ohc_bXDFMr4CqfqOSOt05qoDbA_KKqBeAniDEuekQVfbF16wouWzWI-YXr7E3SsOlk6fPWJatHi95kCDm1drXP1aPuHkXC8gOvyDYEJ4xMVoKGSX_Z3kjAOKH4wny9KFEXbNPMF9DxCqa4I0eee-SYMU0Ipa4LTiYo-ixAAfHcD0pLTIEdH8lsShIOnscQJE2arTqFCiKuh74BCGo3t1CtDFxec0KgxCD8DamMgTACKCPRJwCeqE3DvXE-xxoKIfhLNKNi8wG4HCUKTO8txZpuCe8xtPwwIBPDce9HnJQuMY1TtA0MmX9r1yDmWZ3hdMRs1aAunxxomWx-RhSnxrbpzQ7STo-vfcJ6nmj1L67_mh8fgfdw9FYBNq3szh2HRTOhtUZQX-tAhrW9gCoijsgzCbWAG8w_4RbyZX2D-eIpEYZc0y5SH0EO8xIV7ZPTktKxT1xPWxoo3Kbm26ueYcMvkEHolFXToJuMk-LxkVNjVKE2pzwKAZ3MbX02hzXT1RgINqy-E-_Nz0EQbuYU4Esio5kjrbguAdD3xZTepXvJ1u--Ejr5iabLCwfDzO_nxyiy4noyluy480zN7XemnpYGxgnEY8lh0JxpYBmqz-fiCZuEwVCy2Qhx0XVq1Bu48r7ZJH-IXzk7hNTxoVRe1Wkg2mpbhV1uTxcJvGGAVR3mAUCuPo1ZKSfCKJ_a_c0b3BowGHp43_bFQ0tTV7xlq0ykn-ePIoKwIHPLKNnPAX1dBOjjKxWIisME31AUsba1UYoFpORkABZ82-E8bBEzsRTUltmop4a7vH5Qsmo_VUjVjqVYKrOx5RXT6-woyrfH8RJFqjuHkD43guyf8n1-b8LtM70=w948-h1264-s-no-gm?authuser=0",
+      "caption": "Point Reyes Lighthouse stairs.",
+      "id": 4
+    },
+    {
+      "parkCode": "pore",
+      "url": "https://lh3.googleusercontent.com/pw/ABLVV87ev9SUmQN_TnOESW29TEVGrandXYnNdMTIU82PhlYrNpkyc34uVKqJ_dBxHIa2o8AX7UR-gkUwZ1FyAtYYwT1gcXjPaO_Scal_MUfQOlihHPA6FPcFpL2aNgy8CdWhdMBEF25Jz3rM19-fLdETT4HacQu2EcpAymO6Io_s_Dz2IYH3WpewyjUvzDK-4RvZyvth_l1ZwhO7d0WPY6OYXh0c0otluAlos_LbldHKKLQc8BI5rEaz5KWi5UzjCvPLtRGkrkj9TxNm9kcbgt3vZIz7-Xj98aR6ACZZNLnEjTKKzefP571IEeIOASNYEudalB4P6WDqclKD9EWTOsjfdutwOKlPwcC1DGaetOOjRL5tYi8xO1X2h7ia10gHKHwLQjEppIHW3OIuX5TUv5dagNd4vCMz5uZRHqw5JeEbBOE5gxSwa70PUNVpsER4h9e1ct6jiGQLteVy7BJNiwUeottVFrXnBvhVgVQnf3sZT0jWCr8_fGb5YmCRbrj6Ielc-0HmDvHlsoHcz6yGo_pSANI74ju6ajaJbQel4BmHlm8Qd1YwGGbVqrg9rosBkDxQ3Hp2IqlMxXtltgEcUMfayxivaifXbMj_WwUYwxoBoICzqSLwEjvZykI2I2PUld2Dizk_XuJaAFqkz6S5iY7Pn6rr79pqw32_da5kn0en935FyioZrgQB5q6qBeq3chI6ryrMogM2qW5G9qTUVNPtp0bujscg7Q6ds1MYZw2ygocH8WCOz-xyNzWCn0nYiCMdeYbkLAUp8oEEW-WKOEuvbHWpaQpwMgvPQFmAnK_eaNwfJNbXNDmyz4Ze4hkEVrVumATezianBVMjDkvjUbxIwv510zReKN7yDFtFNVU65CSvxXtWmVYuorfFo8G33fqqF6WOG88=w1686-h1264-s-no-gm?authuser=0",
+      "caption": "Board at Point Reyes Visitor Center showing number of whales seen.",
+      "id": 5
     }
   ]
 }
