@@ -1,6 +1,5 @@
 .park-card {
     width: 30%;
-    /* border-radius: 5%; */
     background-color: #D1E2C4;
     padding: 1%;
     font-size: 12px;
@@ -24,5 +23,4 @@
 
 .park-card p {
     text-overflow: ellipsis;
-    /* flex-shrink: 3; */
 }

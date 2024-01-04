@@ -22,7 +22,6 @@ function App() {
     .then(res => res.json())
     .then(data => {
       setParks(data);
-      console.log(data);
     })
   }, [])
 

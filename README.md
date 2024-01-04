@@ -85,7 +85,7 @@ The data is provided by the National Parks Service: https://www.nps.gov/subjects
 
 ## User Stories:
 
-As a user, when I load the home page, I can see a list of parks and a CTA to search for Parks.
+As a user, when I load the home page, I can see a list of parks.
 
 As a user, I can search for a park by name.
 

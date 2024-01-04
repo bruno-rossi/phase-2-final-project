@@ -29,14 +29,14 @@ function ParkPage() {
         })
     }, []);
 
-    console.log(pictures);
-    console.log(parkStamp);
+    // console.log(pictures);
+    // console.log(parkStamp);
 
     // Map activities to list items:
     const activities = parkToDisplay[0].activities.map(activity => <li key={activity.id}>{activity.name}</li>)
 
     // Define stamps functionality below:
-    console.log(stamps);
+    // console.log(stamps);
     // const parkStamp = stamps.find(stamp => stamp.parkCode === params.parkCode);
 
     useEffect(() => {
@@ -58,7 +58,7 @@ function ParkPage() {
 
         setStamps(() => [...stamps, newStamp]);
 
-        console.log(stamps);
+        // console.log(stamps);
 
         fetch("http://localhost:8000/stamps", {
             method: "POST",

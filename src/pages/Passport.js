@@ -9,7 +9,6 @@ function Passport() {
 
     return (
         <div>
-            {/* <h1>Passport page</h1> */}
             <div id="stamps-container">
                 {stamps.map(stamp => <Stamp key={stamp.id} stamp={stamp} />)}
             </div>

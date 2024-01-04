@@ -14,16 +14,6 @@
  }
  
 .picture {
-   /* flex-grow: 1; */
-
    height: 200px;
-   min-width: 200px;
-   object-fit: cover;
-   vertical-align: bottom;
-   /* border-style: solid; */
-
 }
 
-#gallery:last-child {
-   flex-grow: 100;
-}
