@@ -1,5 +1,6 @@
 h1 {
-    background-color: #D1E2C4;
+    /* background-color: #D1E2C4; */
+    margin-bottom: 5%;
 }
 
 form input {
@@ -8,6 +9,7 @@ form input {
     border-width: 0;
     padding: 0.5%;
     font-family: 'Source Serif 4';
+    width: 40%;
     /* margin-top: 1%;
     margin-bottom: 1%; */
 }
@@ -37,3 +39,37 @@ form button {
     padding: 1%;
     background-color: #D1E2C4;
 }
+
+#stamp-box {
+    float: inline-end;
+    position: sticky;
+    width: 20%;
+    height: 200px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-style: groove;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-start;
+    padding-top: 2%;
+    border-radius: 5%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+    gap: 5px;
+}
+
+#stamp-form input {
+    width: 120%;
+}
+
+#picture-form {
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+

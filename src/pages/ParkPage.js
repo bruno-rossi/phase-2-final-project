@@ -104,31 +104,35 @@ function ParkPage() {
         <div>
             {/* {featuredImage} */}
             <h1>{parkToDisplay[0].fullName}</h1>
-            {isVisited ? <p>Visited!</p> : <form onSubmit={handleStampSubmit}>
+
+            {/* <h2>Pictures:</h2> */}
+            {pictures.length === 0 ? null : <ImageCarousel pictures={pictures} />}
+
+            <div id="stamp-box">
+            {isVisited ? <p>Visited!</p> : <form onSubmit={handleStampSubmit} id="stamp-form">
                 <input name="date" type="date" />
                 <button>Stamp!</button>
             </form> }
+            </div>
             
-            {/* <h2>About:</h2>
+            {/* 
             <p>State: {parkToDisplay[0].states}</p> */}
             
             <p>{parkToDisplay[0].description}</p>
             {/* <hr /> */}
 
-            {/* <h2>Pictures:</h2> */}
-            {pictures.length === 0 ? null : <ImageCarousel pictures={pictures} />}
+            {/* <hr /> */}
 
-            <form onSubmit={handlePictureSubmit}>
+            {/* <h2>Activities:</h2> */}
+            <ul id="activities-list">
+                {activities}
+            </ul>
+
+            <form id="picture-form" onSubmit={handlePictureSubmit}>
                 <input name="picture" type="text" placeholder="Enter picture URL here" />
                 <input name="caption" type="text" placeholder="Enter picture caption here" />
                 <button>Submit</button>
             </form>
-            {/* <hr /> */}
-
-            <h2>Activities:</h2>
-            <ul id="activities-list">
-                {activities}
-            </ul>
         </div>
     )
 }
