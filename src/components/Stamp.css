@@ -1,7 +1,11 @@
 #stamp {
-    padding: 2%;
+    padding: 20px;
     width: max-content;
     text-align: center;
-    margin: 2% 5% 2% 5%;
+    /* margin: 2% 5% 2% 5%; */
     border-width: 5px;
+    border-radius: 50%;
+    border-style: double;
+    border-color: #778A35;
+    color: #778A35;
 }

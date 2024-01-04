@@ -2,12 +2,13 @@ import { useState, useEffect } from "react";
 import NavBar from "./components/NavBar";
 import { Outlet, Navigate, useNavigate} from "react-router-dom";
 import Parks from "./pages/Parks";
+import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
 
   const [parks, setParks] = useState([]);
-  const [search, setSearch] = useState("Park");
+  const [search, setSearch] = useState("");
   const [stamps, setStamps] = useState([]);
 
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
     <div className="App">
         <NavBar />
         <Outlet context={{parks: parks, search: search, setSearch: setSearch, stamps: stamps, setStamps: setStamps}} />
+        <Footer />
     </div>
   );
 }

@@ -1,8 +1,21 @@
 nav {
     height: 48px;
+    display: flex;
+    align-items: center;
+    /* position: sticky; */
+    /* margin-top: auto;
+    left: 0;
+    top: 0;
+    width: 100%; */
 }
 
 nav a {
     /* margin: 5% 5% 5% 5%; */
     text-align: center;
+    background-color: #778A35;
+    text-decoration: none;
+    color: #D1E2C4; 
+    padding: 2%;
+    text-align: center;
+    vertical-align: center;
 }

@@ -3,6 +3,7 @@ import Images from "../components/Images";
 import { useOutletContext } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import "./ParkPage.css";
+import Stamp from "../components/Stamp";
 
 function ParkPage() {
 
@@ -11,28 +12,32 @@ function ParkPage() {
     const {parks, search, setSearch, stamps, setStamps} = useOutletContext();
     const [isVisited, setIsVisited] = useState(false);
     const [pictures, setPictures] = useState([]);
+    const [parkStamp, setParkStamp] = useState(stamps.find(stamp => stamp.parkCode === params.parkCode))
 
     // Resolve which park data to display for the page:
     const parkToDisplay = parks.data.filter(park => park.parkCode === params.parkCode);
+
     useEffect(() => {
-        setPictures(parkToDisplay[0].images)
+        fetch("http://localhost:8000/pictures")
+        .then(res => res.json())
+        .then(data => {
+            
+            const currentParkPictures = data.filter(picture => picture.parkCode === params.parkCode);
+
+            setPictures([...parkToDisplay[0].images, ...currentParkPictures]);
+
+        })
     }, []);
+
+    console.log(pictures);
+    console.log(parkStamp);
 
     // Map activities to list items:
     const activities = parkToDisplay[0].activities.map(activity => <li key={activity.id}>{activity.name}</li>)
 
     // Define stamps functionality below:
     console.log(stamps);
-
-    const colors = [ "maroon", "purple", "seagreen", "teal", "darkslateblue", "olive", "teal", "goldenrod", "mediumvioletred", "seagreen"];
-    const radii = [ "10%", "20%", "30%", "40%", "50%", "60%", "40%", "30%", "20%", "10%" ];
-    const borderStyles = [ "double", "ridge", "groove", "double", "ridge", "groove", "double", "ridge", "groove", "double"];
-
-    function randomizeStamp() {
-        return Math.floor(Math.random() * 10 - 1);
-    }
-
-    console.log(randomizeStamp());
+    // const parkStamp = stamps.find(stamp => stamp.parkCode === params.parkCode);
 
     useEffect(() => {
         setIsVisited(stamps.some(stamp => stamp.parkCode === params.parkCode));
@@ -43,9 +48,17 @@ function ParkPage() {
 
         setIsVisited(prevValue => !prevValue);
 
-        const randomColor = colors[randomizeStamp()];
-        const randomRadius = radii[randomizeStamp()];
-        const randomStyle = borderStyles[randomizeStamp()]
+        const newStamp = {
+            "parkName": parkToDisplay[0].fullName,
+            "dateVisited": event.target.date.value,
+            "parkCode": parkToDisplay[0].parkCode
+        }
+
+        setParkStamp(newStamp);
+
+        setStamps(() => [...stamps, newStamp]);
+
+        console.log(stamps);
 
         fetch("http://localhost:8000/stamps", {
             method: "POST",
@@ -53,33 +66,15 @@ function ParkPage() {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: JSON.stringify({
-                "parkName": parkToDisplay[0].fullName,
-                "dateVisited": event.target.date.value,
-                "parkCode": parkToDisplay[0].parkCode,
-                "color": randomColor,
-                "borderStyle": randomStyle,
-                "borderRadius": randomRadius
-              })
+            body: JSON.stringify(newStamp)
         })
-        .then(res => res.json())
-        .then(newStamp => setStamps(prevValue => [...prevValue, newStamp]))
-
+        // .then(res => res.json())
+        // .then(newStamp => {setStamps(() => [...stamps, newStamp]);})
+        
         event.target.reset();
     }
 
-    // const featuredImage = parkToDisplay[0].images.length !== 0 ? <img id="featured-image" src={parkToDisplay[0].images[0].url} alt={parkToDisplay[0].images[0].altText} /> : null;
-
     // Define picture functionality below:
-
-    useEffect(() => {
-        fetch("http://localhost:8000/pictures")
-        .then(res => res.json())
-        .then(data => {
-            
-            const currentParkPictures = data.filter(picture => picture.parkCode === params.parkCode);
-            setPictures(prevValue => [...prevValue, currentParkPictures])})
-    }, [])
 
     function handlePictureSubmit(event) {
         event.preventDefault();
@@ -105,37 +100,32 @@ function ParkPage() {
 
     return (
         <div>
-            {/* {featuredImage} */}
             <h1>{parkToDisplay[0].fullName}</h1>
 
-            {/* <h2>Pictures:</h2> */}
             {pictures.length === 0 ? null : <Images pictures={pictures} />}
 
-            <div id="stamp-box">
-            {isVisited ? <p>Visited!</p> : <form onSubmit={handleStampSubmit} id="stamp-form">
+            {console.log(isVisited)}
+            {/* {console.log(parkStamp)} */}
+            <div id="form-box">
+            {isVisited ? <Stamp stamp={parkStamp}/> : <form onSubmit={handleStampSubmit} id="stamp-form">
                 <input name="date" type="date" />
-                <button>Stamp!</button>
+                <button className="button">Stamp!</button>
             </form> }
-            </div>
-            
-            {/* 
-            <p>State: {parkToDisplay[0].states}</p> */}
-            
-            <p>{parkToDisplay[0].description}</p>
-            {/* <hr /> */}
-
-            {/* <hr /> */}
-
-            {/* <h2>Activities:</h2> */}
-            <ul id="activities-list">
-                {activities}
-            </ul>
 
             <form id="picture-form" onSubmit={handlePictureSubmit}>
                 <input name="picture" type="text" placeholder="Enter picture URL here" />
                 <input name="caption" type="text" placeholder="Enter picture caption here" />
-                <button>Submit</button>
+                <button className="button">Submit</button>
             </form>
+            </div>
+            
+            <h2>{parkToDisplay[0].designation} · {parkToDisplay[0].states}</h2>
+            <p>{parkToDisplay[0].description}</p>
+            <p>{parkToDisplay[0].directionsInfo}</p>
+
+            <ul id="activities-list">
+                {activities}
+            </ul>
         </div>
     )
 }

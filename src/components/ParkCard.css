@@ -4,18 +4,25 @@
     background-color: #D1E2C4;
     padding: 1%;
     font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .park-card img {
     width: 20%;
 }
 
-a {
+.park-card a {
     color: #D1E2C4;
     text-decoration: none;
     background-color: #778A35;
     padding: 2%;
-    position: sticky;
     align-self: flex-end;
     vertical-align: middle;
+}
+
+.park-card p {
+    text-overflow: ellipsis;
+    /* flex-shrink: 3; */
 }

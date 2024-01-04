@@ -24,12 +24,6 @@
 
 }
 
-#prev-button{
-   /* border-style: solid; */
-
-}
-
-#next-button {
-   /* border-style: solid; */
-
+#gallery:last-child {
+   flex-grow: 100;
 }

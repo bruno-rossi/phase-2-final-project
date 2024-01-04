@@ -16,6 +16,8 @@ function Images({pictures}) {
     //     setCurrentIndex(prevIndex => prevIndex - 1 < 0 ? pictures.length -1 : prevIndex - 1);
     // }
 
+    console.log(pictures);
+
     return (
         <div>
             {/* {pictures.length < 2 ? null : <span id="prev-button" onClick={handlePrevious}>Prev</span>}
@@ -25,7 +27,7 @@ function Images({pictures}) {
                 {/* <figcaption><sub>{pictures[currentIndex].caption}</sub></figcaption>
             </figure>
             {pictures.length < 2 ? null : <span id="next-button" onClick={handleNext}>Next</span>} */}
-            {pictures.length < 1 ? null : <div id="gallery">{pictures.map(picture => <div className="picture-container"><img key={picture.id} className="picture" src={picture.url} alt={picture.caption} /></div>)}</div>}
+            {pictures.length < 1 ? null : <div id="gallery">{pictures.map(picture => <img key={picture.caption} className="picture" src={picture.url} alt={picture.caption} />)}</div>}
         </div>
     )
 }

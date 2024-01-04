@@ -3,7 +3,10 @@ body {
     margin-left: 5%;
     background-color: #EBEBE8;
     font-family: 'Source Serif 4';
-    /* width: 100%; */
+    color: #31352E;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 #search-input {
