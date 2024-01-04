@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ImageCarousel from "../components/ImageCarousel";
+import Images from "../components/Images";
 import { useOutletContext } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import "./ParkPage.css";
@@ -14,6 +14,9 @@ function ParkPage() {
 
     // Resolve which park data to display for the page:
     const parkToDisplay = parks.data.filter(park => park.parkCode === params.parkCode);
+    useEffect(() => {
+        setPictures(parkToDisplay[0].images)
+    }, []);
 
     // Map activities to list items:
     const activities = parkToDisplay[0].activities.map(activity => <li key={activity.id}>{activity.name}</li>)
@@ -75,7 +78,7 @@ function ParkPage() {
         .then(data => {
             
             const currentParkPictures = data.filter(picture => picture.parkCode === params.parkCode);
-            setPictures(currentParkPictures)})
+            setPictures(prevValue => [...prevValue, currentParkPictures])})
     }, [])
 
     function handlePictureSubmit(event) {
@@ -106,7 +109,7 @@ function ParkPage() {
             <h1>{parkToDisplay[0].fullName}</h1>
 
             {/* <h2>Pictures:</h2> */}
-            {pictures.length === 0 ? null : <ImageCarousel pictures={pictures} />}
+            {pictures.length === 0 ? null : <Images pictures={pictures} />}
 
             <div id="stamp-box">
             {isVisited ? <p>Visited!</p> : <form onSubmit={handleStampSubmit} id="stamp-form">

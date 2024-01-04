@@ -1,8 +1,9 @@
 body {
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
     background-color: #EBEBE8;
     font-family: 'Source Serif 4';
+    /* width: 100%; */
 }
 
 #search-input {

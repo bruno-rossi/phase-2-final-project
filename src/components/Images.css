@@ -1,0 +1,35 @@
+
+#gallery {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   overflow: auto;
+   height: 200px;
+   border-radius: 25px;
+   margin-bottom: 2%;
+ }
+
+ #gallery::-webkit-scrollbar {
+   display: none;
+ }
+ 
+.picture {
+   /* flex-grow: 1; */
+
+   height: 200px;
+   min-width: 200px;
+   object-fit: cover;
+   vertical-align: bottom;
+   /* border-style: solid; */
+
+}
+
+#prev-button{
+   /* border-style: solid; */
+
+}
+
+#next-button {
+   /* border-style: solid; */
+
+}
