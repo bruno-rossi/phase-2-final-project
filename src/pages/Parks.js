@@ -22,7 +22,7 @@ function Parks() {
         <div>
             <input id="search-input" type="text" placeholder="Search for a park" onChange={handleChange} value={search} />
             <div id="parks-container">
-                {searchedParks.map(park => <ParkCard key={park.id} park={park} />)}
+                {searchedParks.map(park => <ParkCard key={park.parkCode} park={park} />)}
             </div>
         </div>
     )

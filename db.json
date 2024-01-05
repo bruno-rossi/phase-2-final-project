@@ -16,14 +16,14 @@
       "parkName": "Point Reyes National Seashore",
       "dateVisited": "2018-01-14",
       "parkCode": "pore"
-    },
-    {
-      "parkName": "Zion National Park",
-      "dateVisited": "2024-01-04",
-      "parkCode": "zion",
-      "id": 3
     }
   ],
   "pictures": [
+    {
+      "parkCode": "zion",
+      "url": "https://cdn.getyourguide.com/img/tour/613ba2a2a57a4.jpeg/97.jpg",
+      "caption": "Crimson Canyon hiker.",
+      "id": 1
+    }
   ]
 }

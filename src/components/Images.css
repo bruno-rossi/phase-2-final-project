@@ -6,7 +6,7 @@
    overflow: auto;
    height: 200px;
    border-radius: 25px;
-   margin-bottom: 2%;
+
  }
 
  #gallery::-webkit-scrollbar {
@@ -15,5 +15,9 @@
  
 .picture {
    height: 200px;
+}
+
+#picture-caption-box {
+   text-align: center;
 }
 
